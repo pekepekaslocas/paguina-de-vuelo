@@ -1,0 +1,273 @@
+@import"../base/logo";
+
+@mixin flex($direction,$justify,$aling,$gap) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $aling;
+    gap: $gap;
+}
+
+@mixin header_up{
+    @include flex (null,space-between,center,null);
+    height: 72px;
+    border-bottom: 4px solid $color-principal;
+
+    /*conent_left*/
+    .content_left{
+       @include logo;
+    }
+    /*content_rigtht */
+    .content_right {
+        @include flex(null,center ,center,null);
+
+        margin: 0px 3px;
+        width: 120px;
+        height: 40px;
+        border-left: 3px solid $color-principal;
+        border-right: 3px solid $color-principal;
+        border-radius: 20px;
+
+        a {
+            @include flex(null,space-between,center,null);
+             width: 100%;
+             height: 100%;
+            text-decoration: none;
+             color: #1b95db;
+            
+            i {
+                font-size: 25px;
+            }
+
+         }
+        
+    }
+    
+}
+
+@mixin nav {
+    margin: 4px 0px;
+    height: 50px;
+
+    ul {
+        @include flex(row,space-around,center,null);
+        flex-wrap: nowrap;
+        overflow-x: auto;  
+        position: relative;
+
+        li{
+            @include flex(null,center,center,null);
+            flex-wrap: nowrap;
+            flex: 1 1 content;
+            height: 50px;
+            width: 100px;
+            margin: 0px 15px;
+            position: relative;
+            left: 65px;
+                
+            a {
+                @include flex(null,center,center,null);
+                
+                text-decoration: none;
+                color: #1b95db;
+
+                i {
+                    font-size: 25px;
+                    margin: 0px 3px;
+                }
+
+                span{
+                    font-size: 15px;
+                    margin: 0px 3px;
+                }
+            }
+
+        }
+
+    }
+
+}
+
+@mixin header_down{
+    @include flex (null,center,center,null);
+
+    background: linear-gradient(to bottom, rgb(0, 0, 0, 0),rgba(0, 0, 0, 0.7)),url(../../assets/fonde_de_binvenida.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-bottom: 3px solid $color-principal;
+    height: 200px;
+    padding-bottom: 3px;
+
+    h1{
+        
+        color: #2f3142d7;
+        font-size: 40px;
+        font-family: poppins ,sans-serif;
+        padding-top: 10px;
+        margin-bottom: 4px;
+    }   
+
+    h2{
+        height: 50px;
+        color: #ffffffbd;
+        font-size: 25px;
+        font-family: yellowtail ,sans-serif;
+        padding-bottom: 10px;
+        
+    }
+
+}
+
+@mixin main_base{
+    @include flex (null,center,center,null);
+    height: 270px;
+    
+    .info_1 {
+       @include flex (column,center,center,null);
+        
+       width: 350px;
+       height: 270px;
+       font-size: 17px;
+       color: #2f3142d7;
+       
+       h3 {
+          color: rgb(212, 20, 20);
+          font-size: 30px;
+          margin-bottom: 15px
+       }
+    }
+ 
+    .info_2 {
+       @include flex (column,center,center,null);
+        
+       background: linear-gradient(to bottom, rgb(0, 0, 0, 0),rgba(0, 0, 0, 0.6));
+       width: 350px;
+       height: 270px;
+       border: 3px solid $color-principal;
+       border-radius: 20px;
+       font-size: 17px;
+       color: #ffffffbd;
+ 
+       h3 {
+          color: rgb(212, 20, 20);
+          font-size: 30px;
+          margin-bottom: 15px
+       }
+    } 
+ 
+    .item_3_left {
+       @include flex (column,center,center,null);
+        
+       width: 350px;
+       height: 270px;
+       font-size: 17px;
+       color: #2f3142d7;
+ 
+       h3 {
+          color: rgb(212, 20, 20);
+          font-size: 30px;
+          margin-bottom: 15px
+       }
+    }
+ 
+    .item_3_right{
+        display: none;
+        visibility: hidden;
+
+        @include flex (column,center,center,null);
+        
+       width: 350px;
+       height: 270px;
+       font-size: 17px;
+       color: #2f3142d7;
+ 
+       h3 {
+          color: rgb(212, 20, 20);
+          font-size: 30px;
+          margin-bottom: 15px
+       }
+    }
+
+}
+
+@mixin footer {
+    @include flex(null,center,center,null);
+   
+   .footer_up{
+      @include flex(null,space-around,center,null);
+      
+      margin-bottom: 5px;
+      height: 65px;
+      
+      .content_logo{
+         @include logo;
+          width: 150px;
+          background-position: center -15px;
+      }
+
+      .content_red{
+         @include flex(null,center,center,null);
+
+         flex-wrap: nowrap;
+
+         ul{
+            @include flex (null,center,center,null);
+               flex-wrap: nowrap;
+            margin-top: 10px;
+            width: 100%;
+            height: 100%;
+
+            li{
+               @include flex (null,center,center,null);
+               flex-wrap: nowrap;
+               width: 50px;
+               height: 40px;
+               margin: 0px 5px;
+
+               a i {
+                  font-size: 25px;
+               }
+
+            }
+
+         }
+
+
+      }
+
+   }
+
+   .footer_down{
+      @include flex(column,center,center,null);
+      
+      flex-wrap: wrap;
+      border-top: 3px solid #73747a ;
+      background: #444343;
+
+      .footer_item{
+
+         width: 450px;
+         height: 150px;
+         font-size: 15px;
+         color: #ffffffbd;
+         border-bottom: 3px solid #73747a;
+
+         p{
+            margin-top: 10px;
+         }
+
+         h5 {
+            margin-top: 10px;
+            color: rgb(212, 20, 20);
+            font-size: 25px;
+            margin-bottom: 15px
+         }
+
+
+      }
+
+   }
+   
+
+}

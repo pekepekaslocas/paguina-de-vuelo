@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-color: #89f #6b65658e;
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+font-size: 62.5%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: $color-secundario;
+    font-size: $font-medium;
+}
+
+/* experimento*/
+body::-webkit-scrollbar{
+    width: 7px;
+}
+
+body{
+    overflow-x:hidden;
+     overflow-y:scroll;
+    width: 100vw;
+    height: 100vh;
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: #4053ff;
+    border-radius: 5px;
+}
+

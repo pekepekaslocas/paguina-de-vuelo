@@ -1,0 +1,36 @@
+/*modificamos el header_up*/
+
+.header_up {
+   @include header_up;
+}
+
+/*modificamos el header_nav*/
+
+.header_nav{
+    @include nav;
+}
+
+/*modificamos el header_down*/
+
+.header_down{
+   @include header_down;
+}
+
+/* modificamos el main */
+
+.main_item {
+  @include main_base;
+}
+
+.item_2 {
+   background-image: url(../../assets/fondo_2.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+}
+
+/*modificamos el footer*/
+
+.footer{
+   @include footer;
+}
