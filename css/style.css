@@ -124,6 +124,11 @@ body::-webkit-scrollbar-thumb {
   font-size: 15px;
   margin: 0px 3px;
 }
+@media screen and (min-width: 600px) {
+  .header_nav ul {
+    overflow: hidden;
+  }
+}
 
 /*modificamos el header_down*/
 .header_down {
@@ -151,6 +156,17 @@ body::-webkit-scrollbar-thumb {
   font-size: 25px;
   font-family: yellowtail, sans-serif;
   padding-bottom: 10px;
+}
+@media screen and (min-width: 600px) {
+  .header_down {
+    height: 300px;
+  }
+  .header_down h1 {
+    font-size: 45px;
+  }
+  .header_down h2 {
+    font-size: 30px;
+  }
 }
 
 /* modificamos el main */
@@ -224,6 +240,57 @@ body::-webkit-scrollbar-thumb {
   color: rgb(212, 20, 20);
   font-size: 30px;
   margin-bottom: 15px;
+}
+@media screen and (min-width: 600px) {
+  .main_item {
+    height: 350px;
+  }
+  .main_item .item_3_left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6));
+    width: 350px;
+    height: 270px;
+    border: 3px solid #f39b29;
+    border-radius: 20px;
+    font-size: 17px;
+    color: rgba(255, 255, 255, 0.7411764706);
+  }
+  .main_item .item_3_left h3 {
+    color: rgb(212, 20, 20);
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+  .main_item .item_3_right {
+    display: inline;
+    visibility: visible;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../assets/fondo_3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 350px;
+    height: 270px;
+    border: 3px solid #f39b29;
+    border-radius: 20px;
+    font-size: 17px;
+    color: rgba(255, 255, 255, 0.7411764706);
+  }
+  .main_item .item_3_right h3 {
+    color: rgb(212, 20, 20);
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+}
+
+.item_3 {
+  justify-content: space-between;
+  border-bottom: 3px solid #f39b29;
 }
 
 .item_2 {
@@ -311,6 +378,21 @@ body::-webkit-scrollbar-thumb {
   color: rgb(212, 20, 20);
   font-size: 25px;
   margin-bottom: 15px;
+}
+@media screen and (min-width: 600px) {
+  .footer .footer_down {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+  }
+  .footer .footer_down .footer_item {
+    width: 250px;
+    height: 250px;
+    border-radius: 40px;
+    border-bottom: 0px solid #73747a;
+    border-left: 2px solid #73747a;
+    border-right: 2px solid #73747a;
+  }
 }
 
 /* modificamos el main de alojamientos */

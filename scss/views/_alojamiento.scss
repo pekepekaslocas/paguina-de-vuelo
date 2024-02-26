@@ -26,6 +26,7 @@
     }
 
     .content_hotel{
+       
         .card{
             @include flex (column, center, center, null);
             
