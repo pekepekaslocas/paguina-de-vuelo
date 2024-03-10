@@ -9,12 +9,12 @@
 .header_nav{
     @include nav;
      
-    @media screen and (min-width:600px) {
+    /*@media screen and (min-width:600px) {
       ul{
          overflow: hidden;
       }
 
-    }
+    }*/
 
 }
 
@@ -23,7 +23,7 @@
 .header_down{
    @include header_down;
 
-   @media screen and (min-width:600px) {
+/*@media screen and (min-width:600px) {
       height: 300px;
       h1{
          font-size: 45px;
@@ -33,7 +33,7 @@
       }
 
 
-   }
+   }*/
 
 }
 
@@ -42,7 +42,7 @@
 .main_item {
    @include main_base;
 
-   @media screen and (min-width:600px) {
+   /*@media screen and (min-width:600px) {
          height: 350px;
          
 
@@ -86,7 +86,7 @@
                margin-bottom: 15px
             }
          }    
-   }
+   }*/
 
 }
 
@@ -107,7 +107,7 @@
 .footer{
    @include footer;
 
-   @media screen and (min-width:600px) {
+  /* @media screen and (min-width:600px) {
       
       .footer_down{
          flex-direction: row;
@@ -125,6 +125,6 @@
 
       }
 
-   }
+   }*/
 
 }
