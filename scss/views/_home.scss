@@ -42,7 +42,10 @@
 .main_item {
    @include main_base;
 
-   /*@media screen and (min-width:600px) {
+
+
+
+   @media screen and (min-width:600px) {
          height: 350px;
          
 
@@ -56,6 +59,7 @@
             border-radius: 20px;
             font-size: 17px;
             color: #ffffffbd;
+            margin-left: 10px;
       
             h3 {
                color: rgb(212, 20, 20);
@@ -86,7 +90,7 @@
                margin-bottom: 15px
             }
          }    
-   }*/
+   }
 
 }
 

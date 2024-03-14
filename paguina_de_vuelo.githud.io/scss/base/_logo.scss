@@ -1,0 +1,12 @@
+@mixin logo{
+    margin: 0px 3px;
+    width: 200px;
+    height: 60px;
+    border-left: 3px solid $color-principal;
+    border-right: 3px solid $color-principal;
+    border-radius: 20px;
+    background-image: url(../../assets/Logos/logo_company_vuelo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center -25px;
+}

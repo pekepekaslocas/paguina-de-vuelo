@@ -1,0 +1,592 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-color: #89f rgba(107, 101, 101, 0.5568627451);
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #1b95db;
+  font-size: 1.6rem;
+}
+
+/* experimento*/
+body::-webkit-scrollbar {
+  width: 7px;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  width: 100vw;
+  height: 100vh;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #4053ff;
+  border-radius: 5px;
+}
+
+/*modificamos el header_up*/
+.header_up {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+  border-bottom: 4px solid #f39b29;
+  /*conent_left*/
+  /*content_rigtht */
+}
+.header_up .content_left {
+  margin: 0px 3px;
+  width: 200px;
+  height: 60px;
+  border-left: 3px solid #f39b29;
+  border-right: 3px solid #f39b29;
+  border-radius: 20px;
+  background-image: url(../../assets/Logos/logo_company_vuelo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center -25px;
+}
+.header_up .content_right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 3px;
+  width: 120px;
+  height: 40px;
+  border-left: 3px solid #f39b29;
+  border-right: 3px solid #f39b29;
+  border-radius: 20px;
+}
+.header_up .content_right a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: #1b95db;
+}
+.header_up .content_right a i {
+  font-size: 25px;
+}
+
+/*modificamos el header_nav*/
+.header_nav {
+  margin: 4px 0px;
+  height: 50px;
+}
+.header_nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  position: relative;
+}
+.header_nav ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex: 1 1 content;
+  height: 50px;
+  width: 100px;
+  margin: 0px 15px;
+  position: relative;
+  left: 65px;
+}
+.header_nav ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #1b95db;
+}
+.header_nav ul li a i {
+  font-size: 25px;
+  margin: 0px 3px;
+}
+.header_nav ul li a span {
+  font-size: 15px;
+  margin: 0px 3px;
+}
+@media screen and (min-width: 600px) {
+  .header_nav ul {
+    overflow: hidden;
+  }
+}
+
+/*modificamos el header_down*/
+.header_down {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url(../../assets/fonde_de_binvenida.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-bottom: 3px solid #f39b29;
+  height: 200px;
+  padding-bottom: 3px;
+}
+.header_down h1 {
+  color: rgba(47, 49, 66, 0.8431372549);
+  font-size: 40px;
+  font-family: poppins, sans-serif;
+  padding-top: 10px;
+  margin-bottom: 4px;
+}
+.header_down h2 {
+  height: 50px;
+  color: rgba(255, 255, 255, 0.7411764706);
+  font-size: 25px;
+  font-family: yellowtail, sans-serif;
+  padding-bottom: 10px;
+}
+@media screen and (min-width: 600px) {
+  .header_down {
+    height: 300px;
+  }
+  .header_down h1 {
+    font-size: 45px;
+  }
+  .header_down h2 {
+    font-size: 30px;
+  }
+}
+
+/* modificamos el main */
+.main_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 270px;
+}
+.main_item .info_1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 270px;
+  font-size: 17px;
+  color: rgba(47, 49, 66, 0.8431372549);
+}
+.main_item .info_1 h3 {
+  color: rgb(212, 20, 20);
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+.main_item .info_2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6));
+  width: 350px;
+  height: 270px;
+  border: 3px solid #f39b29;
+  border-radius: 20px;
+  font-size: 17px;
+  color: rgba(255, 255, 255, 0.7411764706);
+}
+.main_item .info_2 h3 {
+  color: rgb(212, 20, 20);
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+.main_item .item_3_left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 270px;
+  font-size: 17px;
+  color: rgba(47, 49, 66, 0.8431372549);
+}
+.main_item .item_3_left h3 {
+  color: rgb(212, 20, 20);
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+.main_item .item_3_right {
+  display: none;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 270px;
+  font-size: 17px;
+  color: rgba(47, 49, 66, 0.8431372549);
+}
+.main_item .item_3_right h3 {
+  color: rgb(212, 20, 20);
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+@media screen and (min-width: 600px) {
+  .main_item {
+    height: 350px;
+  }
+  .main_item .item_3_left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6));
+    width: 350px;
+    height: 270px;
+    border: 3px solid #f39b29;
+    border-radius: 20px;
+    font-size: 17px;
+    color: rgba(255, 255, 255, 0.7411764706);
+  }
+  .main_item .item_3_left h3 {
+    color: rgb(212, 20, 20);
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+  .main_item .item_3_right {
+    display: inline;
+    visibility: visible;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../assets/fondo_3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 350px;
+    height: 270px;
+    border: 3px solid #f39b29;
+    border-radius: 20px;
+    font-size: 17px;
+    color: rgba(255, 255, 255, 0.7411764706);
+  }
+  .main_item .item_3_right h3 {
+    color: rgb(212, 20, 20);
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+}
+
+.item_3 {
+  justify-content: space-between;
+  border-bottom: 3px solid #f39b29;
+}
+
+.item_2 {
+  background-image: url(../../assets/fondo_2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/*modificamos el footer*/
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer .footer_up {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 5px;
+  height: 65px;
+}
+.footer .footer_up .content_logo {
+  margin: 0px 3px;
+  width: 200px;
+  height: 60px;
+  border-left: 3px solid #f39b29;
+  border-right: 3px solid #f39b29;
+  border-radius: 20px;
+  background-image: url(../../assets/Logos/logo_company_vuelo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center -25px;
+  width: 150px;
+  background-position: center -15px;
+}
+.footer .footer_up .content_red {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.footer .footer_up .content_red ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin-top: 10px;
+  width: 100%;
+  height: 100%;
+}
+.footer .footer_up .content_red ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 50px;
+  height: 40px;
+  margin: 0px 5px;
+}
+.footer .footer_up .content_red ul li a i {
+  font-size: 25px;
+}
+.footer .footer_down {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border-top: 3px solid #73747a;
+  background: #444343;
+}
+.footer .footer_down .footer_item {
+  width: 450px;
+  height: 150px;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.7411764706);
+  border-bottom: 3px solid #73747a;
+}
+.footer .footer_down .footer_item p {
+  margin-top: 10px;
+}
+.footer .footer_down .footer_item h5 {
+  margin-top: 10px;
+  color: rgb(212, 20, 20);
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+@media screen and (min-width: 600px) {
+  .footer .footer_down {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+  }
+  .footer .footer_down .footer_item {
+    width: 250px;
+    height: 250px;
+    border-radius: 40px;
+    border-bottom: 0px solid #73747a;
+    border-left: 2px solid #73747a;
+    border-right: 2px solid #73747a;
+  }
+}
+
+/* modificamos el main de alojamientos */
+.main .content_carusel {
+  width: 100%;
+  height: 400px;
+}
+.main .content_carusel .carousel {
+  width: 100%;
+  height: 100%;
+}
+.main .content_carusel .carousel .carousel-inner {
+  width: 100%;
+  height: 100%;
+}
+.main .content_carusel .carousel .carousel-inner .carousel-item {
+  width: 100%;
+  height: 100%;
+}
+.main .content_carusel .carousel .carousel-inner .carousel-item img {
+  width: 100%;
+  height: 100%;
+}
+.main .content_hotel .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+}
+.main .content_hotel .card img {
+  height: 350px;
+  width: 100%;
+}
+.main .content_hotel .card div {
+  border: 2px solid #aaa;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+}
+.main .content_hotel .card div h5 {
+  font-size: 30px;
+  color: #f39b29;
+}
+.main .content_hotel .card div a {
+  text-align: center;
+  font-size: 30px;
+  width: 200px;
+}
+
+.main .content_carusel {
+  width: 100%;
+  height: 400px;
+}
+.main .content_carusel .carousel {
+  width: 100%;
+  height: 100%;
+}
+.main .content_carusel .carousel .carousel-inner {
+  width: 100%;
+  height: 100%;
+}
+.main .content_carusel .carousel .carousel-inner .carousel-item {
+  width: 100%;
+  height: 100%;
+}
+.main .content_carusel .carousel .carousel-inner .carousel-item img {
+  width: 100%;
+  height: 100%;
+}
+.main .content_hotel .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+}
+.main .content_hotel .card img {
+  height: 350px;
+  width: 100%;
+}
+.main .content_hotel .card div {
+  border: 2px solid #aaa;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+}
+.main .content_hotel .card div h5 {
+  font-size: 30px;
+  color: #f39b29;
+}
+.main .content_hotel .card div p {
+  border-bottom: 2px solid #f39b29;
+}
+.main .content_hotel .card div span {
+  text-align: center;
+  font-size: 20px;
+  width: 200px;
+}
+
+.main .content_carusel {
+  width: 100%;
+  height: 400px;
+}
+.main .content_carusel .carousel {
+  width: 100%;
+  height: 100%;
+}
+.main .content_carusel .carousel .carousel-inner {
+  width: 100%;
+  height: 100%;
+}
+.main .content_carusel .carousel .carousel-inner .carousel-item {
+  width: 100%;
+  height: 100%;
+}
+.main .content_carusel .carousel .carousel-inner .carousel-item img {
+  width: 100%;
+  height: 100%;
+}
+.main .content_hotel .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+}
+.main .content_hotel .card img {
+  height: 350px;
+  width: 100%;
+}
+.main .content_hotel .card div {
+  border: 2px solid #aaa;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+}
+.main .content_hotel .card div h5 {
+  font-size: 30px;
+  color: #f39b29;
+}
+.main .content_hotel .card div p {
+  border-bottom: 2px solid #f39b29;
+}
+.main .content_hotel .card div span {
+  text-align: center;
+  font-size: 20px;
+  width: 200px;
+}
+
+.main .content_carusel {
+  width: 100%;
+  height: 400px;
+}
+.main .content_carusel .carousel {
+  width: 100%;
+  height: 100%;
+}
+.main .content_carusel .carousel .carousel-inner {
+  width: 100%;
+  height: 100%;
+}
+.main .content_carusel .carousel .carousel-inner .carousel-item {
+  width: 100%;
+  height: 100%;
+}
+.main .content_carusel .carousel .carousel-inner .carousel-item img {
+  width: 100%;
+  height: 100%;
+}
+.main .content_hotel .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+}
+.main .content_hotel .card img {
+  height: 350px;
+  width: 100%;
+}
+.main .content_hotel .card div {
+  border: 2px solid #aaa;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+}
+.main .content_hotel .card div h5 {
+  font-size: 30px;
+  color: #f39b29;
+}
+.main .content_hotel .card div p {
+  border-bottom: 2px solid #f39b29;
+}
+.main .content_hotel .card div span {
+  text-align: center;
+  font-size: 20px;
+  width: 200px;
+}
+
+/*# sourceMappingURL=style.css.map */

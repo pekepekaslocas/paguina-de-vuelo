@@ -1,0 +1,130 @@
+/*modificamos el header_up*/
+
+.header_up {
+   @include header_up;
+}
+
+/*modificamos el header_nav*/
+
+.header_nav{
+    @include nav;
+     
+    @media screen and (min-width:600px) {
+      ul{
+         overflow: hidden;
+      }
+
+    }
+
+}
+
+/*modificamos el header_down*/
+
+.header_down{
+   @include header_down;
+
+   @media screen and (min-width:600px) {
+      height: 300px;
+      h1{
+         font-size: 45px;
+      }
+      h2{
+         font-size: 30px;
+      }
+
+
+   }
+
+}
+
+/* modificamos el main */
+
+.main_item {
+   @include main_base;
+
+   @media screen and (min-width:600px) {
+         height: 350px;
+         
+
+         .item_3_left {
+            @include flex (column,center,center,null);
+
+            background: linear-gradient(to bottom, rgb(0, 0, 0, 0),rgba(0, 0, 0, 0.6));
+            width: 350px;
+            height: 270px;
+            border: 3px solid $color-principal;
+            border-radius: 20px;
+            font-size: 17px;
+            color: #ffffffbd;
+      
+            h3 {
+               color: rgb(212, 20, 20);
+               font-size: 30px;
+               margin-bottom: 15px
+            }
+         } 
+
+         .item_3_right{
+            display: inline;
+            visibility: visible;
+            @include flex (column,center,center,null);
+             
+            background-image: url(../../assets/fondo_3.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 350px;
+            height: 270px;
+            border: 3px solid $color-principal;
+            border-radius: 20px;
+            font-size: 17px;
+            color: #ffffffbd;
+      
+            h3 {
+               color: rgb(212, 20, 20);
+               font-size: 30px;
+               margin-bottom: 15px
+            }
+         }    
+   }
+
+}
+
+.item_3{
+   justify-content: space-between;
+   border-bottom: 3px solid $color-principal;
+}
+
+.item_2 {
+   background-image: url(../../assets/fondo_2.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+}
+
+/*modificamos el footer*/
+
+.footer{
+   @include footer;
+
+   @media screen and (min-width:600px) {
+      
+      .footer_down{
+         flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+
+        .footer_item{
+         width: 250px;
+         height: 250px;
+         border-radius: 40px;
+         border-bottom: 0px solid #73747a;
+         border-left:2px solid #73747a ;
+         border-right: 2px solid #73747a;
+        }
+
+      }
+
+   }
+
+}

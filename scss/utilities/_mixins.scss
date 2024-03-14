@@ -27,20 +27,34 @@
         border-left: 3px solid $color-principal;
         border-right: 3px solid $color-principal;
         border-radius: 20px;
+        transition: all 0.5s;
 
         a {
             @include flex(null,space-between,center,null);
              width: 100%;
              height: 100%;
             text-decoration: none;
-             color: #1b95db;
-            
+            transition: all 0.5s;
+            color: #1b95db;
             i {
                 font-size: 25px;
             }
 
          }
         
+         &:hover{
+            transition: all 0.5s;
+            border-left: 3px solid #1b95db;
+            border-right: 3px solid #1b95db;
+            a {
+                color: $color-principal;
+            transition: all 0.5s;
+               
+               i {
+                   font-size: 25px;
+               }
+         }
+      }
     }
     
 }
@@ -57,6 +71,7 @@
 
         li{
             @include flex(null,center,center,null);
+            transition:all 0.5s ;
             flex-wrap: nowrap;
             flex: 1 1 content;
             height: 50px;
@@ -64,26 +79,64 @@
             margin: 0px 15px;
             position: relative;
             left: 65px;
+            
                 
             a {
                 @include flex(null,center,center,null);
-                
+                transition:all 0.5s ;
                 text-decoration: none;
                 color: #1b95db;
+                border-radius: 20px;
+                border-left: 0px solid $color-principal;
+                border-right: 0px solid $color-principal;
 
                 i {
+                  transition:all 0.5s ;
                     font-size: 25px;
                     margin: 0px 3px;
                 }
 
                 span{
+                  transition:all 0.5s ;
                     font-size: 15px;
                     margin: 0px 3px;
                 }
             }
 
-        }
+            &:hover{
+               transition: all 0.5s;
+               a {
+                  @include flex(null,center,center,null);
+                  
+                  text-decoration: none;
+                  color: $color-principal;
+                  border-radius: 20px;
+                  padding: 0px 10px;
+                  border-right:3px solid $color-principal ;
+                  border-left: 3px solid $color-principal ;
+  
+                  i {
+                      font-size: 25px;
+                      margin: 0px 3px;
+                  }
+  
+                  span{
+                      font-size: 15px;
+                      margin: 0px 3px;
+                  }
+              }
+            }
 
+            @media screen and (min-width:600px) {
+               left: 10px;
+               margin: 0px 5px;
+            }
+
+        }
+       
+        @media screen and (min-width:600px) {
+         overflow-x: hidden;  
+      }
     }
 
 }
@@ -163,24 +216,7 @@
        height: 270px;
        font-size: 17px;
        color: #2f3142d7;
- 
-       h3 {
-          color: rgb(212, 20, 20);
-          font-size: 30px;
-          margin-bottom: 15px
-       }
-    }
- 
-    .item_3_right{
-        display: none;
-        visibility: hidden;
-
-        @include flex (column,center,center,null);
-        
-       width: 350px;
-       height: 270px;
-       font-size: 17px;
-       color: #2f3142d7;
+       margin-left:90px;
  
        h3 {
           color: rgb(212, 20, 20);
@@ -227,6 +263,13 @@
 
                a i {
                   font-size: 25px;
+                  transition: all 0.5s;
+               }
+
+               &:hover{
+                  a i{
+                     color: $color-principal
+                  }
                }
 
             }
